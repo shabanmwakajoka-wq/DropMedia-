@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MediaDrop Pro - browser-based media downloader demo.">
+<title>MediaDrop Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <button class="icon" id="menuBtn">☰</button>
+  <a class="logo" href="#home">Media<span>Drop</span><b>PRO</b></a>
+  <div class="top-actions"><button class="icon" id="themeBtn">☾</button><button class="upgrade" id="upgradeBtn">Go Premium</button></div>
+</header>
+<aside id="side">
+  <div class="side-head">MENU</div>
+  <button class="nav active" data-page="home">⌂ <span>Home</span></button>
+  <button class="nav" data-page="downloads">↓ <span>Downloads</span></button>
+  <button class="nav" data-page="history">◷ <span>History</span></button>
+  <button class="nav" data-page="premium">◆ <span>Premium</span></button>
+  <button class="nav" data-page="settings">⚙ <span>Settings</span></button>
+  <div class="side-bottom">MediaDrop Pro<br><small>Fast. Simple. Browser based.</small></div>
+</aside>
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="pill">✦ SIMPLE MEDIA TOOL</div>
+    <h1>Download media.<br><span>Your way.</span></h1>
+    <p>Paste a direct media URL, choose the format, and save it to your device.</p>
+    <div class="download-box">
+      <div class="input-line"><input id="url" type="url" placeholder="https://example.com/media.mp4"><select id="type"><option value="auto">Auto</option><option value="image">Image</option><option value="video">Video</option><option value="audio">Audio</option><option value="file">File</option></select><button id="download" class="main-btn">Download ↓</button></div>
+      <div class="hint">Use direct URLs that you are authorized to download.</div>
+    </div>
+    <div id="status" class="status hidden"></div>
+    <div class="ad-slot"><span>ADVERTISEMENT</span><div>Your ad can appear here</div><small>Replace this area with your approved ad-network code.</small></div>
+  </div>
+  <div class="stats">
+    <div><strong id="downloadCount">0</strong><span>Session downloads</span></div>
+    <div><strong>4</strong><span>Media types</span></div>
+    <div><strong>24/7</strong><span>Browser access</span></div>
+  </div>
+  <div class="cards">
+    <article><i>⚡</i><h3>Fast workflow</h3><p>Paste, select, download. No complicated interface.</p></article>
+    <article><i>📱</i><h3>Mobile friendly</h3><p>Responsive design for Android, iPhone and desktop.</p></article>
+    <article><i>🌍</i><h3>Worldwide ready</h3><p>Host the static app on a global web platform.</p></article>
+  </div>
+</section>
+
+<section id="downloads" class="page">
+  <div class="heading"><h2>Downloads</h2><p>Files downloaded during this browser session.</p></div><div id="downloadsList" class="list empty">No downloads yet.</div>
+</section>
+
+<section id="history" class="page">
+  <div class="heading"><h2>History</h2><p>Recent download attempts.</p></div><div id="historyList" class="list empty">No history yet.</div>
+</section>
+
+<section id="premium" class="page">
+  <div class="heading"><div class="pill">MONETIZATION</div><h2>MediaDrop Premium</h2><p>Use this page as a premium upsell. Connect your own payment provider before accepting payments.</p></div>
+  <div class="pricing">
+    <article><h3>Free</h3><div class="price">$0</div><p>Basic direct URL downloads</p><p>Standard interface</p><button class="ghost">Current plan</button></article>
+    <article class="featured"><div class="popular">POPULAR</div><h3>Premium</h3><div class="price">$3.99<small>/month</small></div><p>Ad-free experience</p><p>Priority processing</p><p>Extra tools (when backend is connected)</p><button id="payBtn" class="main-btn">Connect payment</button></article>
+  </div>
+  <div class="notice">Payment is not active in this demo. Add your own verified payment provider and business details before selling subscriptions.</div>
+</section>
+
+<section id="settings" class="page">
+  <div class="heading"><h2>Settings</h2><p>Control the local experience.</p></div>
+  <div class="settings">
+    <label>Dark mode <input id="dark" type="checkbox"></label>
+    <label>Save history <input id="saveHistory" type="checkbox" checked></label>
+    <button id="clear" class="danger">Clear session data</button>
+  </div>
+  <div class="ad-slot compact"><span>ADVERTISEMENT</span><div>Ad placement</div></div>
+</section>
+
+<section id="privacy" class="page legal"><h2>Privacy</h2><p>This demo stores download history in your browser session. A production deployment should publish a complete privacy policy describing analytics, advertising, cookies and third-party services.</p></section>
+<section id="terms" class="page legal"><h2>Terms</h2><p>Only download media you have permission to download. A production service should publish complete terms, copyright procedures and acceptable-use rules.</p></section>
+</main>
+<footer><span>© 2026 MediaDrop Pro</span><span><a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></span></footer>
+<script src="script.js"></script>
+</body></html>
